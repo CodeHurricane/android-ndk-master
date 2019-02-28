@@ -72,7 +72,6 @@ public class MainActivity extends Activity
                 curDelayTV.setText(String.format("%s", curVal));
                 setSeekBarPromptPosition(delaySeekBar, curDelayTV);
                 if (!fromUser) return;
-
                 echoDelayProgress = progress * 1000 / delaySeekBar.getMax();
                 configureEcho(echoDelayProgress, echoDecayProgress);
             }
@@ -167,11 +166,11 @@ public class MainActivity extends Activity
         return super.onOptionsItemSelected(item);
     }
 
-    private void startEcho() {
+    private void startEcho(){
         if(!supportRecording){
             return;
         }
-        if (!isPlaying) {
+        if (!isPlaying){
             if(!createSLBufferQueueAudioPlayer()) {
                 statusView.setText(getString(R.string.player_error_msg));
                 return;

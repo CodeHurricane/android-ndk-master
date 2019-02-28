@@ -12,11 +12,11 @@ add_library(echo
 
 #include libraries needed for echo lib
 target_link_libraries(echo
-  PRIVATE
-    OpenSLES
-    android
-    log
-    atomic)
+        PRIVATE
+        OpenSLES
+        android
+        log
+        atomic)
 
 target_compile_options(echo
   PRIVATE

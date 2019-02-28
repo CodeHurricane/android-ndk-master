@@ -18,11 +18,11 @@
 #include <GLES3/gl32.h>
 
 #define STB_IMAGE_IMPLEMENTATION
-#include <stb/stb_image.h>
 #include "AssetUtil.h"
 
 #define MODULE_NAME "Teapot::Texture"
 #include "android_debug.h"
+#include "stb_image.h"
 
 /**
  * Cubemap and Texture2d implementations for Class Texture.

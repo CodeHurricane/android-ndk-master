@@ -270,12 +270,13 @@ Java_com_example_hellojnicallback_MainActivity_startTicks(JNIEnv *env, jobject i
     g_ctx.mainActivityClz = (*env)->NewGlobalRef(env, clz);
     g_ctx.mainActivityObj = (*env)->NewGlobalRef(env, instance);
 
-    int result  = pthread_create( &threadInfo_, &threadAttr_, UpdateTicks, &g_ctx);
+    int result = pthread_create( &threadInfo_, &threadAttr_, UpdateTicks, &g_ctx);
     assert(result == 0);
 
     pthread_attr_destroy(&threadAttr_);
 
     (void)result;
+
 }
 
 /*

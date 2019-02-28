@@ -35,7 +35,7 @@ public class ChoreographerNativeActivity extends NativeActivity
         implements Choreographer.FrameCallback{
 
     static {
-        // Load native library to invoke chreographerCallback().
+        //Load native library to invoke chreographerCallback().
         System.loadLibrary("ChoreographerNativeActivity");
     }
 
